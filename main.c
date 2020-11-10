@@ -1,12 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    int d = 0;
-    printf("Enter a number \n");
-    scanf("%d %d %d %d", &a,&b,&c,&d);
-    printf("You entered %d and %d and %d and %d", a, b, c, d);
+    int i,n;
+    float arr[4];
+    printf("Enter the number of elements :");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; ++i) {
+        printf("Enter number%d: ", i + 1);
+        scanf("%f", &arr[i]);
+
+    }
+    for (i = 1;i<n; ++i){
+        if (arr[0] < arr[i])
+            arr[0] = arr[i];
+
+    }
+    printf("Largest number is %.2f", arr[0]);
+
+
+
+
+
     return 0;
 }
